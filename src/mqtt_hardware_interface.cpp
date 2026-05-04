@@ -1,4 +1,6 @@
 #include "mqtt_hardware_interface/mqtt_hardware_interface.hpp"
+#include "mqtt_hardware_interface/mqtt_subscriber.hpp"
+
 
 #include <vector>
 
@@ -17,7 +19,7 @@ hardware_interface::CallbackReturn MqttHardwareInterface::on_init(
 
   mqtt_broker_uri = params.hardware_info.hardware_parameters.at("mqtt_broker_uri");
   mqtt_client_id = params.hardware_info.hardware_parameters.at("mqtt_client_id");
-  qos = params.hardware_info.hardware_parameters.at("qos");
+  qos = std::stoi(params.hardware_info.hardware_parameters.at("qos"));
 
   if (mqtt_broker_uri.empty())
   {
@@ -81,48 +83,23 @@ hardware_interface::CallbackReturn MqttHardwareInterface::on_configure(
       const rclcpp_lifecycle::State & previous_state)
 {
   mqtt_client = std::make_shared<mqtt::async_client>(mqtt_broker_uri, mqtt_client_id);
-  conn_opts = std::make_shared<mqtt::connect_options_builder::v5>()
-                        .clean_start(false)
-                        .properties({{mqtt::property::SESSION_EXPIRY_INTERVAL, 604800}})
-                        .finalize();
-  try 
-  {
-    // Start consumer before connecting to make sure to not miss messages
-    mqtt_client->start_consuming();
+  conn_opts = std::make_shared<mqtt::connect_options>();
 
-    // Connect to the server
-    auto tok = cli->connect(&conn_opts);
+  mqtt_callback = std::make_shared<callback>(*mqtt_client, *conn_opts);
+  //callback(*mqtt_client, *conn_opts);
+  mqtt_client->set_callback(*mqtt_callback);
 
-    // Getting the connect response will block waiting for the
-    // connection to complete.
-    auto rsp = tok->get_connect_response();
-
-    RCLCPP_DEBUG_STREAM(rclcpp::get_logger("MqttHardwareInterface"), "Connected to the mqtt broker");
-
-    if(!rsp.is_session_present()){
-      for (auto conf : state_interface_to_config_){
-        mqtt_client->subscribe(conf.second,qos)->wait();
-      }
-
-      for (auto conf : command_interface_to_config_){
-        mqtt_client->subscribe(conf.second,qos)->wait();
-      }
-    }
+    mqtt_callback->set_config(state_interface_to_states_,state_interface_to_config_,qos);
+  mqtt_client->connect()->wait();
     
-  }
-  catch (const mqtt::exception& exc) {
-        RCLCPP_ERROR_STREAM(
-        rclcpp::get_logger("MqttHardwareInterface"),
-        "Mqtt error: " + exc);
-        return CallbackReturn::ERROR;
-    }
-
+  
   return CallbackReturn::SUCCESS;
 }
 
 hardware_interface::CallbackReturn MqttHardwareInterface::on_cleanup(
       const rclcpp_lifecycle::State & previous_state)
 {
+    mqtt_client->disconnect()->wait();
     return CallbackReturn::SUCCESS;
 }
 
@@ -154,6 +131,8 @@ std::vector<hardware_interface::StateInterface> MqttHardwareInterface::export_st
   return state_interfaces;
 }
 
+
+
 std::vector<hardware_interface::CommandInterface> MqttHardwareInterface::export_command_interfaces()
 {
   std::vector<hardware_interface::CommandInterface> command_interfaces;
@@ -174,22 +153,22 @@ std::vector<hardware_interface::CommandInterface> MqttHardwareInterface::export_
 hardware_interface::return_type MqttHardwareInterface::read(
 const rclcpp::Time & time, const rclcpp::Duration & period)
 {
-  for(auto interface : state_interface_to_states_)
-  {
-    auto evt = mqtt_client->consume_event();
-    if (const auto* p = evt.get_message_if()) {
-        auto& msg = *p;
-        state_interface_to_states_[msg->get_topic()] = std::stof(msg->to_string());
-    }
-  }
-  
+  for(auto state : mqtt_callback->get_states()){
+    state_interface_to_states_[state.first] = state.second;
+  } 
   return hardware_interface::return_type::OK;
 }
 
-hardware_interface::return_type MqttHardwareInterface::read(
+hardware_interface::return_type MqttHardwareInterface::write(
 const rclcpp::Time & time, const rclcpp::Duration & period)
 {
-  auto pubmsg = mqtt::make_message(TOPIC, PAYLOAD1);
+  for(auto command : command_interface_to_config_){
+    mqtt::topic top(*mqtt_client, command.second, qos);
+    mqtt::token_ptr tok;
+    tok = top.publish(std::to_string(command_interface_to_commands_[command.first]));
+    tok->wait();
+  }
+        
   return hardware_interface::return_type::OK;
 }
 

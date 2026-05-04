@@ -1,13 +1,17 @@
 #ifndef MQTT_SYSTEM_INTERFACE
 #define MQTT_SYSTEM_INTERFACE
 
-#include "hardware_interface/system_interface.hpp"
-
 #include <unordered_map>
 #include <string>
 #include <memory>
+#include <vector>
 
+#include "rclcpp/rclcpp.hpp"
+#include "rclcpp_lifecycle/state.hpp"
+#include "hardware_interface/system_interface.hpp"
+#include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "mqtt/client.h"
+#include "mqtt_hardware_interface/mqtt_subscriber.hpp"
 
 namespace mqtt_hardware_interface
 {
@@ -58,7 +62,9 @@ protected:
   std::string mqtt_client_id="MqttHardwareInterface";
   int qos = 0;
   std::shared_ptr<mqtt::async_client> mqtt_client;
-  std::shared_ptr<mqtt::connect_options::v5> conn_opts;
+  std::shared_ptr<mqtt::connect_options> conn_opts;
+  std::vector<std::string> topics;
+  std::shared_ptr<callback> mqtt_callback;
 };
 
 }

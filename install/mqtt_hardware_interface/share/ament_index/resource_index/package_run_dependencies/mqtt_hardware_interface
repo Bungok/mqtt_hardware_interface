@@ -1,1 +1,1 @@
-ament_lint_auto;ament_lint_common
+hardware_interface;libmodbus-dev;pluginlib;rclcpp;rclcpp_lifecycle;ament_lint_auto;ament_lint_common

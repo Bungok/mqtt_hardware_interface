@@ -1,8 +1,8 @@
  <!-- Plugin for connecting mqtt devices to ros2_control -->
 <library path="mqtt_hardware_interface">
-  <class name="mqtt_hardware_interface/mqttHardwareInterface"
-         type="mqtt_hardware_interface::mqttHardwareInterface"
-         base_class_type="hardware_interface::SystemInterface">
+  <class name = "mqtt_hardware_interface/MqttHardwareInterface"
+        type="mqtt_hardware_interface::MqttHardwareInterface"
+        base_class_type="hardware_interface::SystemInterface">
     <description>
       ros2_control hardware interface for connecting mqtt devices to ros2_control.
     </description>

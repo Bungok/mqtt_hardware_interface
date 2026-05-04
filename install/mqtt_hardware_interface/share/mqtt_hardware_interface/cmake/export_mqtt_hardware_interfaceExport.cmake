@@ -60,7 +60,7 @@ add_library(mqtt_hardware_interface::mqtt_hardware_interface SHARED IMPORTED)
 
 set_target_properties(mqtt_hardware_interface::mqtt_hardware_interface PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/mqtt_hardware_interface"
-  INTERFACE_LINK_LIBRARIES "hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;rclcpp::rclcpp;rclcpp_lifecycle::rclcpp_lifecycle"
+  INTERFACE_LINK_LIBRARIES "pluginlib::pluginlib;hardware_interface::mock_components;hardware_interface::hardware_interface;pluginlib::pluginlib;rclcpp::rclcpp;rclcpp_lifecycle::rclcpp_lifecycle"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

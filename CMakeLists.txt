@@ -11,7 +11,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   pluginlib
   rclcpp
   rclcpp_lifecycle
-  rclpy
+  rclpy 
 )
 
 # find dependencies
@@ -20,19 +20,19 @@ foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
   find_package(${Dependency} REQUIRED)
 endforeach()
 
+# mqtt hardware interface
 add_library(
   mqtt_hardware_interface
   SHARED
   src/mqtt_hardware_interface.cpp
 )
-
 target_include_directories(
   mqtt_hardware_interface
   PUBLIC
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/mqtt_hardware_interface>
 )
-
+target_link_libraries(mqtt_hardware_interface ${pluginlib_TARGETS})
 ament_target_dependencies(mqtt_hardware_interface ${THIS_PACKAGE_INCLUDE_DEPENDS})
 
 pluginlib_export_plugin_description_file(

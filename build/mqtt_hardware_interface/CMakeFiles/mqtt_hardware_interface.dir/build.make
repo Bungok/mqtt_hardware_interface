@@ -101,12 +101,12 @@ libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libjoint_limits_helpers.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librclcpp_lifecycle.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/liburdf.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/x86_64-linux-gnu/liburdfdom_model.so.4.0
+libmqtt_hardware_interface.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0
 libmqtt_hardware_interface.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librealtime_tools.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librclcpp_action.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librclcpp.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librcl_action.so
-libmqtt_hardware_interface.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libpal_statistics_msgs__rosidl_generator_c.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/liblibstatistics_collector.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so
@@ -277,7 +277,7 @@ libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesuppor
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
-libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.5
+libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librmw.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
 libmqtt_hardware_interface.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so

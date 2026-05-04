@@ -3,6 +3,7 @@
 
 CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/dev/Documents/ORION_VI/mqtt_hardware_interface/src/mqtt_hardware_interface.cpp \
   /home/dev/Documents/ORION_VI/mqtt_hardware_interface/include/mqtt_hardware_interface/mqtt_hardware_interface.hpp \
+  /home/dev/Documents/ORION_VI/mqtt_hardware_interface/include/mqtt_hardware_interface/mqtt_subscriber.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp \
@@ -858,14 +859,82 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+  /usr/local/include/MQTTAsync.h \
+  /usr/local/include/MQTTClientPersistence.h \
+  /usr/local/include/MQTTExportDeclarations.h \
+  /usr/local/include/MQTTProperties.h \
+  /usr/local/include/MQTTReasonCodes.h \
+  /usr/local/include/MQTTSubscribeOpts.h \
+  /usr/local/include/mqtt/async_client.h \
+  /usr/local/include/mqtt/buffer_ref.h \
+  /usr/local/include/mqtt/buffer_view.h \
+  /usr/local/include/mqtt/callback.h \
+  /usr/local/include/mqtt/client.h \
+  /usr/local/include/mqtt/connect_options.h \
+  /usr/local/include/mqtt/create_options.h \
+  /usr/local/include/mqtt/delivery_token.h \
+  /usr/local/include/mqtt/disconnect_options.h \
+  /usr/local/include/mqtt/event.h \
+  /usr/local/include/mqtt/exception.h \
+  /usr/local/include/mqtt/export.h \
+  /usr/local/include/mqtt/iaction_listener.h \
+  /usr/local/include/mqtt/iasync_client.h \
+  /usr/local/include/mqtt/iclient_persistence.h \
+  /usr/local/include/mqtt/message.h \
+  /usr/local/include/mqtt/platform.h \
+  /usr/local/include/mqtt/properties.h \
+  /usr/local/include/mqtt/reason_code.h \
+  /usr/local/include/mqtt/server_response.h \
+  /usr/local/include/mqtt/ssl_options.h \
+  /usr/local/include/mqtt/string_collection.h \
+  /usr/local/include/mqtt/subscribe_options.h \
+  /usr/local/include/mqtt/thread_queue.h \
+  /usr/local/include/mqtt/token.h \
+  /usr/local/include/mqtt/topic.h \
+  /usr/local/include/mqtt/types.h \
+  /usr/local/include/mqtt/will_options.h
 
+
+/usr/local/include/mqtt/will_options.h:
+
+/usr/local/include/mqtt/types.h:
+
+/usr/local/include/mqtt/server_response.h:
+
+/usr/local/include/mqtt/reason_code.h:
+
+/usr/local/include/mqtt/properties.h:
+
+/usr/local/include/mqtt/iclient_persistence.h:
+
+/usr/local/include/mqtt/iaction_listener.h:
+
+/usr/local/include/mqtt/export.h:
+
+/usr/local/include/mqtt/exception.h:
+
+/usr/local/include/mqtt/event.h:
+
+/usr/local/include/mqtt/disconnect_options.h:
+
+/usr/local/include/mqtt/platform.h:
+
+/usr/local/include/mqtt/delivery_token.h:
+
+/usr/local/include/mqtt/client.h:
+
+/usr/local/include/mqtt/buffer_ref.h:
+
+/usr/local/include/mqtt/async_client.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdalign.h:
+
+/usr/local/include/mqtt/subscribe_options.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
@@ -886,6 +955,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/local/include/MQTTExportDeclarations.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
@@ -916,6 +987,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/local/include/mqtt/callback.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -1047,6 +1120,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /usr/include/c++/13/tr1/ell_integral.tcc:
 
+/usr/local/include/MQTTReasonCodes.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/c++/13/thread:
@@ -1058,6 +1133,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/c++/13/string:
 
 /usr/include/c++/13/stdlib.h:
+
+/usr/local/include/mqtt/connect_options.h:
 
 /usr/include/c++/13/stack:
 
@@ -1088,6 +1165,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/c++/13/map:
 
 /usr/include/c++/13/limits:
+
+/usr/local/include/MQTTSubscribeOpts.h:
 
 /usr/include/c++/13/iterator:
 
@@ -1169,6 +1248,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /usr/include/c++/13/bits/stringfwd.h:
 
+/usr/local/include/MQTTProperties.h:
+
 /usr/include/c++/13/bits/string_view.tcc:
 
 /usr/include/c++/13/bits/streambuf.tcc:
@@ -1202,6 +1283,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/c++/13/bits/std_thread.h:
 
 /usr/include/c++/13/bits/std_mutex.h:
+
+/usr/local/include/mqtt/token.h:
 
 /usr/include/c++/13/bits/std_function.h:
 
@@ -1279,10 +1362,6 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
-
 /usr/include/pthread.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/simple_events_queue.hpp:
@@ -1334,6 +1413,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /opt/ros/jazzy/include/rcutils/rcutils/types/array_list.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameter_types.hpp:
+
+/usr/local/include/mqtt/create_options.h:
 
 /opt/ros/jazzy/include/rmw/rmw/qos_policy_kind.h:
 
@@ -1423,6 +1504,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__type_support.hpp:
 
+/usr/local/include/mqtt/string_collection.h:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
@@ -1477,6 +1560,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/types.h:
 
+/usr/local/include/MQTTClientPersistence.h:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/arguments.h:
@@ -1504,6 +1589,12 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /opt/ros/jazzy/include/rclcpp/rclcpp/contexts/default_context.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
+
+/usr/local/include/mqtt/thread_queue.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
+
+/opt/ros/jazzy/include/pal_statistics_msgs/pal_statistics_msgs/msg/statistics_names.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
@@ -1535,10 +1626,6 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/callback_group.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
-
-/opt/ros/jazzy/include/pal_statistics_msgs/pal_statistics_msgs/msg/statistics_names.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_service.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/allocator.h:
@@ -1569,17 +1656,13 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
 
+/home/dev/Documents/ORION_VI/mqtt_hardware_interface/include/mqtt_hardware_interface/mqtt_subscriber.hpp:
+
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
 
 /opt/ros/jazzy/include/rcutils/rcutils/qsort.h:
 
 /usr/include/c++/13/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/duration.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
 
@@ -1595,7 +1678,11 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:
 
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
+
 /opt/ros/jazzy/include/pal_statistics_msgs/pal_statistics_msgs/msg/detail/statistics_values__builder.hpp:
+
+/usr/local/include/mqtt/ssl_options.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:
 
@@ -1616,6 +1703,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
+
+/usr/local/include/mqtt/message.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process.hpp:
 
@@ -1653,11 +1742,19 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__type_support.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/serialization.hpp:
+/opt/ros/jazzy/include/rcl/rcl/error_handling.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp:
 
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/duration.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
+
+/opt/ros/jazzy/include/hardware_interface/hardware_interface/introspection.hpp:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
 
@@ -1685,10 +1782,6 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/pal_statistics/pal_statistics/pal_statistics.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/error_handling.h:
-
 /usr/include/c++/13/pstl/execution_defs.h:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp:
@@ -1705,21 +1798,11 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:
-
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__traits.hpp:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__type_support.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
 
 /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__functions.h:
 
@@ -1728,6 +1811,18 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/c++/13/pstl/glue_algorithm_defs.h:
 
 /opt/ros/jazzy/include/class_loader/class_loader/register_macro.hpp:
+
+/usr/local/include/mqtt/iasync_client.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/serialization.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:
 
 /usr/include/c++/13/future:
 
@@ -1759,10 +1854,6 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/pluginlib/pluginlib/class_list_macros.hpp:
 
-/usr/include/c++/13/tr1/beta_function.tcc:
-
-/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__type_support.h:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp:
@@ -1775,8 +1866,6 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/identifier.h:
 
-/opt/ros/jazzy/include/hardware_interface/hardware_interface/introspection.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_publisher.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__struct.hpp:
@@ -1786,6 +1875,10 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__type_support.h:
 
 /opt/ros/jazzy/include/hardware_interface/hardware_interface/types/hardware_interface_return_values.hpp:
 
@@ -1817,6 +1910,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:
 
+/usr/local/include/mqtt/buffer_view.h:
+
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/service_introspection.h:
@@ -1832,6 +1927,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /opt/ros/jazzy/include/pal_statistics/pal_statistics/pal_statistics_macros.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/event.h:
+
+/usr/local/include/mqtt/topic.h:
 
 /usr/include/c++/13/bits/align.h:
 
@@ -1964,6 +2061,12 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /opt/ros/jazzy/include/rcl/rcl/wait.h:
 
 /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__struct.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/init_options.hpp:
 
@@ -2305,6 +2408,14 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
 
+/usr/include/console_bridge_export.h:
+
+/usr/include/c++/13/pstl/glue_memory_defs.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/matched.h:
+
 /opt/ros/jazzy/include/rmw/rmw/serialized_message.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:
@@ -2443,6 +2554,8 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 
 /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/message_introspection.hpp:
 
+/usr/local/include/MQTTAsync.h:
+
 /opt/ros/jazzy/include/tracetools/tracetools/tracetools.h:
 
 /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/visibility_control.h:
@@ -2568,11 +2681,3 @@ CMakeFiles/mqtt_hardware_interface.dir/src/mqtt_hardware_interface.cpp.o: /home/
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
 /usr/include/c++/13/bits/localefwd.h:
-
-/usr/include/console_bridge_export.h:
-
-/usr/include/c++/13/pstl/glue_memory_defs.h:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/matched.h:
-
-/usr/include/c++/13/bits/memory_resource.h:

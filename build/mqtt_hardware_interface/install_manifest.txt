@@ -1,4 +1,5 @@
 /home/dev/Documents/ORION_VI/mqtt_hardware_interface/install/mqtt_hardware_interface/share/mqtt_hardware_interface/mqtt_hardware_interface.xml
+/home/dev/Documents/ORION_VI/mqtt_hardware_interface/install/mqtt_hardware_interface/include/mqtt_hardware_interface/mqtt_hardware_interface/mqtt_subscriber.hpp
 /home/dev/Documents/ORION_VI/mqtt_hardware_interface/install/mqtt_hardware_interface/include/mqtt_hardware_interface/mqtt_hardware_interface/mqtt_hardware_interface.hpp
 /home/dev/Documents/ORION_VI/mqtt_hardware_interface/install/mqtt_hardware_interface/lib/libmqtt_hardware_interface.so
 /home/dev/Documents/ORION_VI/mqtt_hardware_interface/install/mqtt_hardware_interface/share/mqtt_hardware_interface/environment/library_path.sh
