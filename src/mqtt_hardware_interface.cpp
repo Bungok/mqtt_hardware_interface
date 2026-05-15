@@ -15,6 +15,10 @@ hardware_interface::CallbackReturn MqttHardwareInterface::on_init(
     return CallbackReturn::ERROR;
   }
 
+
+
+  try{
+
   params_ = params;
 
   mqtt_broker_uri = params.hardware_info.hardware_parameters.at("mqtt_broker_uri");
