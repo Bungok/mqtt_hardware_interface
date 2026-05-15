@@ -172,6 +172,30 @@ const rclcpp::Time & time, const rclcpp::Duration & period)
   return hardware_interface::return_type::OK;
 }
 
+hardware_interface::CallbackReturn MqttHardwareInterface::on_shutdown(
+  const rclcpp_lifecycle::State & previous_state) {
+  /* Put your code here */
+  return CallbackReturn::SUCCESS;
+}
+
+hardware_interface::CallbackReturn MqttHardwareInterface::on_activate(
+  const rclcpp_lifecycle::State & previous_state) {
+  /* Put your code here */
+      return CallbackReturn::SUCCESS;
+  };
+
+hardware_interface::CallbackReturn MqttHardwareInterface::on_deactivate(
+  const rclcpp_lifecycle::State & previous_state) {
+  /* Put your code here */
+      return CallbackReturn::SUCCESS;
+  };
+  
+hardware_interface::CallbackReturn MqttHardwareInterface::on_error(
+  const rclcpp_lifecycle::State & previous_state) {
+    /* Put your code here */
+    return CallbackReturn::SUCCESS;
+  };
+
 }
 
 #include "pluginlib/class_list_macros.hpp"
