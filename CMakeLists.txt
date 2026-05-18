@@ -25,6 +25,7 @@ add_library(
   mqtt_hardware_interface
   SHARED
   src/mqtt_hardware_interface.cpp
+  src/mqtt_subscriber.cpp
 )
 target_include_directories(
   mqtt_hardware_interface
@@ -32,7 +33,10 @@ target_include_directories(
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include/mqtt_hardware_interface>
 )
-target_link_libraries(mqtt_hardware_interface ${pluginlib_TARGETS})
+target_link_libraries(mqtt_hardware_interface ${pluginlib_TARGETS}
+  paho-mqttpp3
+  paho-mqtt3as
+)
 ament_target_dependencies(mqtt_hardware_interface ${THIS_PACKAGE_INCLUDE_DEPENDS})
 
 pluginlib_export_plugin_description_file(
@@ -51,8 +55,8 @@ install(
   LIBRARY DESTINATION lib
 )
 
-install(DIRECTORY launch/
-  DESTINATION share/${PROJECT_NAME}
+pluginlib_export_plugin_description_file(hardware_interface
+  mqtt_hardware_interface.xml
 )
 
 ament_export_targets(export_mqtt_hardware_interface HAS_LIBRARY_TARGET)

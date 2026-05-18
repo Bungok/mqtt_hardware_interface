@@ -32,7 +32,19 @@ hardware_interface::CallbackReturn MqttHardwareInterface::on_init(
       "MqttHardwareInterface broker uri for this hardware is empty. Need to set a uri address of the Mqtt broker.");
     return CallbackReturn::ERROR;
   }
+  RCLCPP_INFO_STREAM(
+          rclcpp::get_logger("MqttHardwareInterface"),
+          "Mqtt tries to connect to URI: " + mqtt_broker_uri);
 
+}
+  catch (const std::out_of_range& e) {
+    RCLCPP_ERROR(
+        rclcpp::get_logger("MqttHardwareInterface"),
+        "Out of Range error caught! Check if `mqtt_client_id` and `qos` exist."
+    );
+    return hardware_interface::CallbackReturn::ERROR;
+}
+  
   // initialize the configurations for each command and state/interface of each joint
   for (const hardware_interface::ComponentInfo & joint : params.hardware_info.joints)
   {
@@ -86,6 +98,11 @@ hardware_interface::CallbackReturn MqttHardwareInterface::on_init(
 hardware_interface::CallbackReturn MqttHardwareInterface::on_configure(
       const rclcpp_lifecycle::State & previous_state)
 {
+
+    RCLCPP_DEBUG_STREAM(
+          rclcpp::get_logger("MqttHardwareInterface"),
+          "Begin on_configure()");
+
   mqtt_client = std::make_shared<mqtt::async_client>(mqtt_broker_uri, mqtt_client_id);
   conn_opts = std::make_shared<mqtt::connect_options>();
 
@@ -96,7 +113,10 @@ hardware_interface::CallbackReturn MqttHardwareInterface::on_configure(
     mqtt_callback->set_config(state_interface_to_states_,state_interface_to_config_,qos);
   mqtt_client->connect()->wait();
     
-  
+      RCLCPP_INFO_STREAM(
+          rclcpp::get_logger("MqttHardwareInterface"),
+          "Finished on_configure()");
+
   return CallbackReturn::SUCCESS;
 }
 
